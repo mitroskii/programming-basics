@@ -1,2 +1,1 @@
-# programming-basics
-Programming basics tasks
+# functions
