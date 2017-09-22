@@ -6,27 +6,41 @@ namespace conditional_statements
     {
         static void Main(string[] args)
         {
+            // Define instructions
             Console.WriteLine("Ohjelma tulostaa positiivinen, negatiivinen tai nolla.");
-            Console.Write("Syötä luku: ");
-            string userInput;
-            userInput = Console.ReadLine();
+            bool isNumber;
+            do
+            {
 
-            int evaluatedNumber;
-            int.TryParse(userInput, out evaluatedNumber);
+                Console.Write("Syötä luku: ");
+                // define variables
+                string userInput;
+                userInput = Console.ReadLine();
 
-            if(evaluatedNumber < 0)
-            {
-                Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen");
-            }
-            else if(evaluatedNumber > 0)
-            {
-                Console.WriteLine($"Numero {evaluatedNumber} on positiivinen");
-            }
-            else
-            {
-                Console.WriteLine($"Numero {evaluatedNumber} on nolla");
-            }
-            
+                int evaluatedNumber;
+                isNumber = int.TryParse(userInput, out evaluatedNumber);
+
+                // program logic
+                if (isNumber == true)
+                {
+                    if (evaluatedNumber < 0)
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on negatiivinen");
+                    }
+                    else if (evaluatedNumber > 0)
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on positiivinen");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Numero {evaluatedNumber} on nolla");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Syötit muuta kuin numeroita");
+                }
+            } while (isNumber == false);
             Console.ReadKey();
         }
     }
