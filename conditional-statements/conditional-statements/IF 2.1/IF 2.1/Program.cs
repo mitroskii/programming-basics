@@ -8,49 +8,37 @@ namespace IF_2._1
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.WriteLine("Maatalousnäyttelyn lipunhinta");
+            int price = 16;
+            float discount = 0.0f;
+
 
             Console.Write("Ikä: ");
             int ikä = int.Parse(Console.ReadLine());
             if (ikä < 7)
                 Console.Write("Lippu on ilmainen");
             if (ikä >= 7 && ikä <= 15)
-                Console.Write("Lippu maksaa 8.00€");
+                Console.Write($"Lippu maksaa {price*0.5}€");
             if (ikä >= 65)
-                Console.Write("Lippu maksaa 8.00€");
+                Console.Write($"Lippu maksaa {price * 0.5}€");
 
             if (ikä > 15 && ikä < 65)
-                
             {
-                Console.WriteLine("Oletko varusmies?");
-                Console.Write("");
-                string userInput = Console.ReadLine();
-                if (Console.ReadLine() == "Kyllä")
-                    Console.WriteLine("Lippu maksaa 8.00€");
-                else
-                {
-                    Console.WriteLine("Oletko opiskelija?");
-                    Console.Write("");
-                    if (Console.ReadLine() == "Kyllä")
-                        Console.WriteLine("Oletko Mtk jäsen?");
-                    Console.Write("");
-                    if (Console.ReadLine() == "Kyllä")
-                        Console.WriteLine("Lippu maksaa 6.40€");
-                
-                    else
-                    {
-                        Console.WriteLine("Oletko opiskelija?");
-                        Console.Write("");
-                        if (Console.ReadLine() == "Kyllä")
-                            Console.WriteLine("Lippu maksaa 8.80€");
+                Console.Write("Oletko varusmies? [Y/N]: ");
 
-                        else
-                        {
-                            Console.WriteLine("Oletko Mtk jäsen?");
-                            Console.Write("");
-                            if (Console.ReadLine() == "Kyllä")
-                                Console.WriteLine("Lippu maksaa 13.60€");
-                        }
+                if (Console.ReadLine().ToUpper() == "Y")
+                    Console.Write($"Lippu maksaa {price * 0.5}€");
+                else
+                {                    
+                    Console.Write("Oletko Mtk jäsen? [Y/N]: ");
+                    if (Console.ReadLine().ToUpper() == "Y")
+                        discount = 0.15f;                       
+
+                    Console.Write("Oletko opiskelija? [Y/N]: ");
+                    if (Console.ReadLine().ToUpper() == "Y")
+                    {
+                        discount = discount + 0.45f;
                     }
+                    Console.WriteLine($"lippusi hinta on {price - price * discount}€");
                 }
             }
                 Console.ReadKey();
