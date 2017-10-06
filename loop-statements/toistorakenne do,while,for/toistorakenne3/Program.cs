@@ -7,20 +7,20 @@ namespace toistorakenne3
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.WriteLine("Ohjelma laskee kertoma. Anna luku, jonka kertoma lasketaan: ");
+            Console.WriteLine("Ohjelma laskee parillisten ja parittomien summan. Anna luku, summat lasketaan: ");
             string userInput = Console.ReadLine();
             int number = int.Parse(userInput);
             //int.TryParse(userInput, out int number);
             int i = 0;
-            int f = 1;
+            int f = 0;
             do
             {
                 i = i + 1;
                 f = f + i;
-                //Console.WriteLine($"{i} kertoma on yhtäsuuri kuin{f}"); // 5!=120
+
             } while (i < number);
 
-            Console.WriteLine($"Syötit {i}\n vastaus {f}"); // 5!=120
+            Console.WriteLine($"Syötit {i}\n vastaus {f}");
             Console.ReadKey();
         }
     }
