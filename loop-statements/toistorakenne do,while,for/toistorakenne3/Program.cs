@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 
 namespace toistorakenne3
 {
@@ -20,6 +21,12 @@ namespace toistorakenne3
 
             } while (i < number);
 
+            do
+            {
+                i = i + 1;
+                f = f % i;
+
+            } while (i < number);
             Console.WriteLine($"Syötit {i}\n vastaus {f}");
             Console.ReadKey();
         }
