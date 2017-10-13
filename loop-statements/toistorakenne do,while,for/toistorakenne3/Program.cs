@@ -11,23 +11,21 @@ namespace toistorakenne3
             Console.WriteLine("Ohjelma laskee parillisten ja parittomien summan. Anna luku, summat lasketaan: ");
             string userInput = Console.ReadLine();
             int number = int.Parse(userInput);
-            //int.TryParse(userInput, out int number);
             int i = 0;
             int f = 0;
+            int evenSum = 0;
+            int oddSum = 0;
             do
             {
-                i = i + 1;
-                f = f + i;
+                if (i % 2 == 0)
+                    evenSum += i;
+                else
+                    oddSum += i;
+                i++;
+            }
+            while (i <= number);
 
-            } while (i < number);
-
-            do
-            {
-                i = i + 1;
-                f = f % i;
-
-            } while (i < number);
-            Console.WriteLine($"Syötit {i}\n vastaus {f}");
+            Console.WriteLine($"Parillisten lukujen summa = {evenSum} ja parittomien lukujen summa = {oddSum}");
             Console.ReadKey();
         }
     }
