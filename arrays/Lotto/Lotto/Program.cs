@@ -32,6 +32,7 @@ namespace Lotto
             // Tulostetaan luvut 1-7
             for (int i = 0; i < lotto.Length - 2; i++)
             {
+                Console.WriteLine($"Lottirivi:");
                 Console.WriteLine($"{i + 1}: {lotto[i]} ");
             }
 
