@@ -13,9 +13,14 @@ namespace Taulukkoharjoitus
             {
                 //arvotaan luku
                 array[i] = rnd.Next(21);
-                
-                //tulostetaan luvut
-                Console.WriteLine($"[{i + 1}]: {array[i]} ");
+
+                if ( array[i] < 10)
+                {
+                    //tulostetaan luvut
+                    Console.WriteLine($"[{i + 1}]: 0{array[i]} ");
+                }
+                else
+                    Console.WriteLine($"[{i + 1}]: {array[i]} ");
             }
                 Console.ReadKey();
         }
