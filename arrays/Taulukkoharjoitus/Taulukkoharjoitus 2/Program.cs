@@ -7,27 +7,38 @@ namespace Taulukkoharjoitus_2
         static void Main(string[] args)
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            int[,] array = new int[10, 20];
+            Console.WriteLine("Ohjelma arpoo kaksiulotteiseen taulukkoon arvot 0-100:");
+            int[,] arrays = new int[10, 20];
             Random rnd = new Random();
-            for (int i = 0; i < 10; i++)
-            {
-                for (int j = 0; j < 100; j++)
-                {
-                    //arvotaan luku
-                    array[i, j] = rnd.Next(100);
+            Console.WriteLine("[X, Y] = Arvo");
 
-                    if (array[i, j] < 10)
+            for (int x = 0; x < 10; x++)
+            {
+                for (int y = 0; y < 20; y++)
+                {
+                    if (arrays[x, y] < 10)
                     {
-                        //tulostetaan luvut
-                        Console.WriteLine($"[{i + 1}][{j + 1}]: 0{array[i, j]} ");
+                        arrays[x, y] = int.Parse(getNum((rnd.Next(0, 100))));
+                        Console.WriteLine($"[{x}, {y}] = {arrays[x, y]:00}");
                     }
-                    else
-                        Console.WriteLine($"[{i + 1}][{j + 1}]: {array[i, j]} ");
                 }
             }
+            Console.ReadKey();
+        }
+        static string getNum(int Number)
+        {
+            string num = "";
 
-                Console.ReadKey();
+            if (Number < 10)
+            {
+                num = Number.ToString();
             }
+            else
+            {
+                num = Number.ToString();
+            }
+            return num;
         }
     }
+}
 
