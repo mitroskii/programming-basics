@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merkkijonon käsittely 2", "Merkkijonon käsittely 2\Merkkijonon käsittely 2.csproj", "{23B2C7E7-DC85-4C51-80E9-745CCC20CA2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23B2C7E7-DC85-4C51-80E9-745CCC20CA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B2C7E7-DC85-4C51-80E9-745CCC20CA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B2C7E7-DC85-4C51-80E9-745CCC20CA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B2C7E7-DC85-4C51-80E9-745CCC20CA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89E9C75A-1B8D-41CA-986B-14A9BC5545C1}
+	EndGlobalSection
+EndGlobal
