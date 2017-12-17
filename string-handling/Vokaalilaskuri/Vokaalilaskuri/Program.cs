@@ -26,7 +26,7 @@ namespace Vokaalilaskuri
                     }
                 }
             }
-            Console.WriteLine($"Sanassa {Input} on {count} vokaaalia.");
+            Console.WriteLine($"Sanassa {Input} on {count} vokaalia.");
             Console.ReadKey();
         }
     }
